@@ -1,7 +1,7 @@
 import requests
 import base64
 import time
-url='http://ip:8085/'
+url='http://127.0.0.1:8085/'
 
 N=16
 phpsession=""

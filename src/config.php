@@ -4,7 +4,7 @@ $dbhost = "127.0.0.1";
 $dbuser = "root";
 $dbpass = "root";
 $dbname = "ctftraining";
-$flag = getenv('FLAG');
+$flag = "this_is_flag";
 $defaultId = 'guest';
 $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
