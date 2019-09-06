@@ -5,7 +5,16 @@
 * NJCTF 2017 Be admin
 
 ## 考点
+
 * padding oracle attack
+
+## 启动
+
+    docker-compose up -d
+    open http://127.0.0.1:8085
+
+## Writeup
+
 此题目是关于 padding oracle attack的:
 Padding oracle attack 攻击的原理请看[这篇文章](http://www.freebuf.com/articles/database/151167.html)：
 
@@ -70,18 +79,5 @@ $defaultId = openssl_decrypt($ID, METHOD, SECRET_KEY, OPENSSL_RAW_DATA, $token)
 所以伪造一个`token = $token ^ $defaultId ^ 'admin\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b\x0b'`
 解密之后，就可以使得 $u = 'admin'
 
-## 启动
-* docker-compose up -d
-* open http://127.0.0.1:8085
-
-
-
 ## 版权
 该题目复现环境尚未取得主办方及出题人相关授权，如果侵权，请联系本人删除（ cocolizdf@gmail.com）
-
-
-
-
-
-
-
